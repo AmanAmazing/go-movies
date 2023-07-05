@@ -115,7 +115,7 @@ func finalQuery(movieID,key string) Movie{
 
 
 
-
+// This function takes in a Movie Struct and prints it 
 func printDetails(data Movie){
     fmt.Println(data.Title)
     fmt.Println("Directed by:", data.Director)
