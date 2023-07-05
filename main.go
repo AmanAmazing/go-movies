@@ -93,7 +93,6 @@ func firstQuery(movieName, key string) string{
     if results.Response == "False"{
         log.Fatalln("The movie could not be fetched. Response failure at first query") 
     }    
-    fmt.Println(results.Search[0].ImdbID)
     return results.Search[0].ImdbID
 }
 func finalQuery(movieID,key string) Movie{
@@ -120,9 +119,12 @@ func finalQuery(movieID,key string) Movie{
 func printDetails(data Movie){
     fmt.Println(data.Title)
     fmt.Println("Directed by:", data.Director)
+    fmt.Println("Runtime:",data.Runtime)
     fmt.Println("Actors:", data.Actors)
     fmt.Println("IMDB Rating",data.ImdbRating)
     fmt.Println("Metascore", data.Metascore)
     fmt.Println("plot:",data.Plot)
+    fmt.Println("Poster:", data.Poster)
+    
 }
 
